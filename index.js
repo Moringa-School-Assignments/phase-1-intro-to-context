@@ -49,6 +49,7 @@ function wagesEarnedOnDate(employee, date) {
 	return hoursWorkedOnDate(employee, date) * employee.payPerHour;
 };
 
+
 function allWagesFor(employee) {
 	let dates = employee.timeInEvents.map((e) => e.date);
 	return dates.reduce(
@@ -60,6 +61,7 @@ function findEmployeeByFirstName(arraySource, firstName) {
 	return arraySource.find((employee) => firstName === employee.firstName);
 }
 
+// reduce payroll = total amount
 function calculatePayroll(array) {
 	return array.reduce((totalAmt, employee) => totalAmt + allWagesFor(employee), 0);
 }
